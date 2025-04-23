@@ -6,9 +6,37 @@
     <title>Planilha do Resturante</title>
   </head>
   <body>
+    <div class="container"></div>
     <h1>Planilha - Fluxo de Caixa</h1>
-    <br />
-    <p>Receita <input type="number" /></p>
-    <p>Despesa <input type="number" /></p>
+
+    <form id="form-lancamento">
+        <select id="tipo">
+            <option value="receita">Receita</option>
+            <option value="despesa">Despesa</option>
+        </select>
+        <input type="text" id="descricao" placeholder="Descrição" required />
+        <input type="number" id="valor" placeholder="Valor (R$)" required />
+        <button type="submit"> Adicionar </button>
+    </form>
+
+    <div id="resumo">
+        <p>Receitas: R$ <span id="total-receitas">0.00</span></p>
+        <p>Despesas: R$ <span id="total-despesas">0.00</span></p>
+        <p><strong>Lucro Líquido: R$ <span id="lucro">0.00</span></strong></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody id="lista-lancamentos"></tbody>
+    </table>
+</div>
+
+    <script src="script.js"></script>
   </body>
 </html>
