@@ -10,7 +10,7 @@ document
     const descricao = document.getElementById('descricao').value
     const valor = parseFloat(document.getElementById('valor').value)
 
-    if (descricao || isNaN(valor)) return
+    if (!descricao || isNaN(valor)) return
 
     const tabela = document.getElementById('lista-lancamentos')
     const linha = document.createElement('tr')
