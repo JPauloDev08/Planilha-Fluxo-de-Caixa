@@ -74,3 +74,25 @@ td {
   border-bottom: 1px solid #ddd;
   text-align: left;
 }
+
+select {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:hover {
+  border-color: #007aff;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.3);
+}
