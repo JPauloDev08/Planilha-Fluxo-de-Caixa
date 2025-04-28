@@ -35,11 +35,11 @@ function adicionarLancamento(tipo, descricao, valor) {
 
   // Cria a linha da tabela com os dados e um botão "Excluir"
   linha.innerHTML = `
-    <td>${tipo}</td>
-    <td>${descricao}</td>
-    <td>${formatarMoeda(valor)}</td>
-    <td><button class="btn-excluir">Excluir</button></td>
-  `
+  <td>${tipo}</td>
+  <td>${descricao}</td>
+  <td>${formatarMoeda(valor)}</td>
+  <td><button class="btn-excluir">Excluir</button></td>
+`
 
   tabela.appendChild(linha)
 
