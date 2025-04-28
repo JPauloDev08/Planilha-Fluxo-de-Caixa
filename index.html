@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planilha do Resturante</title>
+    <title>Planilha do Restaurante</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container"></div>
-    <h1>Planilha - Fluxo de Caixa</h1>
+    <div class="container">
+      <h1>Planilha - Fluxo de Caixa</h1>
 
-    <form id="form-lancamento">
+      <form id="form-lancamento">
         <select id="tipo">
-            <option value="receita">Receita</option>
-            <option value="despesa">Despesa</option>
+          <option value="receita">Receita</option>
+          <option value="despesa">Despesa</option>
         </select>
         <input type="text" id="descricao" placeholder="Descrição" required />
         <input type="number" id="valor" placeholder="Valor (R$)" required />
-        <button type="submit"> Adicionar </button>
-    </form>
+        <button type="submit">Adicionar</button>
+      </form>
 
-    <div id="resumo">
-        <p>Receitas: R$ <span id="total-receitas">0.00</span></p>
-        <p>Despesas: R$ <span id="total-despesas">0.00</span></p>
-        <p><strong>Lucro Líquido: R$ <span id="lucro">0.00</span></strong></p>
-    </div>
+      <div id="resumo">
+        <p>Receitas: <span id="total-receitas">R$ 0,00</span></p>
+        <p>Despesas: <span id="total-despesas">R$ 0,00</span></p>
+        <p>
+          <strong>Lucro Líquido: <span id="lucro">R$ 0,00</span></strong>
+        </p>
+      </div>
 
-    <table>
+      <table>
         <thead>
-            <tr>
-                <th>Tipo</th>
-                <th>Descrição</th>
-                <th>Valor</th>
-            </tr>
+          <tr>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Ações</th>
+          </tr>
         </thead>
         <tbody id="lista-lancamentos"></tbody>
-    </table>
-</div>
+      </table>
+    </div>
+    <!-- FECHANDO a div container corretamente -->
 
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
   </body>
 </html>
