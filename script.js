@@ -32,9 +32,11 @@ document
 function adicionarLancamento(tipo, descricao, valor) {
   const tabela = document.getElementById('lista-lancamentos')
   const linha = document.createElement('tr')
+  const dataAtual = new Date().toLocaleDateString('pt-BR')
 
   // Cria a linha da tabela com os dados e um botão "Excluir"
   linha.innerHTML = `
+  <td data-label="Data">${dataAtual}</td>
   <td>${tipo}</td>
   <td>${descricao}</td>
   <td>${formatarMoeda(valor)}</td>
