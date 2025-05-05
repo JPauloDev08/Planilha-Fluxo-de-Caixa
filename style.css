@@ -12,6 +12,7 @@ body {
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 h1 {
@@ -23,6 +24,12 @@ form {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+  }
 }
 
 input,
@@ -66,6 +73,38 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  table {
+    display: block;
+  }
+
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none; /* ou deixe, depende do design */
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    font-weight: bold;
+    color: #555;
+  }
 }
 
 th,
