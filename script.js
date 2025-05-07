@@ -94,3 +94,16 @@ function atualizarResumo() {
 function formatarMoeda(valor) {
   return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 }
+
+document.getElementById('toggle-tema').addEventListener('Click', () => {
+  const body = document.body
+  const botao = document.getElementById('toggle-tema')
+
+  body.classList.contains('dark')
+
+  if (body.classList.contains('dark')) {
+    botao.textContent = 'Modo Claro'
+  } else {
+    botao.textContent = 'Modo Escuro'
+  }
+})
