@@ -95,15 +95,15 @@ function formatarMoeda(valor) {
   return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 }
 
-document.getElementById('toggle-tema').addEventListener('Click', () => {
+document.getElementById('toggle-tema').addEventListener('click', () => {
   const body = document.body
   const botao = document.getElementById('toggle-tema')
 
-  body.classList.contains('dark')
+  body.classList.toggle('dark')
 
   if (body.classList.contains('dark')) {
     botao.textContent = 'Modo Claro'
   } else {
-    botao.textContent = 'Modo Escuro'
+    botao.textContent = '🌙 Modo Escuro'
   }
 })
